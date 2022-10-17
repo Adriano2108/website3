@@ -20,7 +20,7 @@ h1, h2, h3, h4, p{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 90%;
   height: 67px;
   margin-top: 40px;
 }
@@ -29,6 +29,11 @@ h1, h2, h3, h4, p{
   font-size: 30px;
   font-weight: 300;
   cursor: pointer;
+}
+
+.navbar-container p:hover{
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .navbar-left{
@@ -45,7 +50,7 @@ h1, h2, h3, h4, p{
 
 /* Home Page */
 .homepage-container{
-  width: 80%;
+  width: 90%;
 }
 
 /* Top */
@@ -57,7 +62,8 @@ h1, h2, h3, h4, p{
 .top-top{
   display: flex;
   justify-content: space-between;
-  margin: 200px 0px;
+  margin: 220px 0px;
+  column-gap: 20px;
 }
 
 .top-subtitle{
@@ -82,15 +88,50 @@ h1, h2, h3, h4, p{
 .top-buttons{
   display: flex;
   justify-content: space-between;
+  column-gap: 25px;
+  margin: 87px 0px;
 }
 
 .top-buttons button{
   display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   column-gap: 8px;
+  width: 380px;
+  height: 71px;
+  border: 4px solid var(--background-medium);
+  border-radius: 5px;
+  background-color: var(--background-light);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
 }
 
-/* x */
+.top-buttons button:hover{
+  background-color: var(--background-medium);
+
+}
+
+.top-buttons button img{
+  width: 24px;
+  height: 24px;
+}
+
+.top-buttons button p{
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Mid */
+
+.mid-navigator{
+  align-self: center;
+}
+
+.mid-navigator img{
+  width: 250px;
+  margin-bottom: 75px;
+}
 
 
 /* x */

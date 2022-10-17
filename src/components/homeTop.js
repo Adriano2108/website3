@@ -26,6 +26,10 @@ export default function HomeTop() {
         </button>
       </div>
 
+      <div className="mid-navigator">
+        <img src="/assets/navigator.png"/>
+      </div>
+
     </div>
   )
 }
