@@ -1,10 +1,40 @@
+import { useState } from "react";
+import React from "react";
+
 export default function NavBar() {
+
+  let [count, setCount] = React.useState(1)
+
+  let [face, setFace] = React.useState("smile")
+
+  function mouseEnter() {
+    setCount(prevState => prevState + 1)
+
+    if (count >= 11) {
+      setFace("star")
+    } else {
+      setFace("happy")
+    }
+  }
+
+  function mouseLeave() {
+
+    if (count >= 11) {
+      setFace("star")
+    } else {
+      setFace("smile")
+    }
+  }
 
   return (
 
-    <div>
-      Hello this is navbar wtf
-    </div>
+    <nav className="navbar-container">
+      <div className="navbar-left">
+        <img onMouseOver={mouseEnter} onMouseLeave={mouseLeave} src={`/assets/me${face}.png`} alt=""/>
+        <p>Adriano</p>
+      </div>
+      <p>Resume</p>
+    </nav>
 
   );
 }
