@@ -3,9 +3,9 @@ import React from "react";
 
 export default function NavBar() {
 
-  let [count, setCount] = React.useState(1)
+  const [count, setCount] = React.useState(1)
 
-  let [face, setFace] = React.useState("smile")
+  const [face, setFace] = React.useState("smile")
 
   function mouseEnter() {
     setCount(prevState => prevState + 1)
