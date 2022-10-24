@@ -21,7 +21,7 @@ h1, h2, h3, h4, p{
   justify-content: space-between;
   align-items: center;
   width: 90%;
-  height: 67px;
+  height: 5vh;
   margin-top: 40px;
 }
 
@@ -48,15 +48,11 @@ h1, h2, h3, h4, p{
   cursor: pointer;
 }
 
-/* Home Page */
-.homepage-container{
-  width: 90vw;
-}
-
 /* Top */
 .top-container{
   display: flex;
   flex-direction: column;
+  width: 90vw;
 }
 
 .top-top{
@@ -186,7 +182,28 @@ h1, h2, h3, h4, p{
 }
 
 
-/* x */
+/* Work */
 
+.work-container{
+  border: 1px solid red;
+  width: 100%;
+}
 
-/* x */
+/* Projects */
+
+.projects-container{
+  border: 1px solid blue;
+  width: 100%;
+}
+
+/* About */
+
+.about-container{
+  border: 1px solid green;
+  width: 100%;
+}
+
+/* footer */
+.footer-container{
+  
+}

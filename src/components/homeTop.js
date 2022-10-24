@@ -1,21 +1,24 @@
 import { useState } from "react";
 import React from "react";
 
-export default function HomeTop() {
+export default function HomeTop({setPage}) {
 
   const [left, setLeft] = React.useState(1)
 
 
   function navClick1() {
     setLeft(1)
+    setPage(1)
   }
 
   function navClick2() {
     setLeft(2)
+    setPage(2)
   }
 
   function navClick3() {
     setLeft(3)
+    setPage(3)
   }
 
   return (
