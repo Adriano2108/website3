@@ -1,10 +1,8 @@
-import { useState } from "react";
 import React from "react";
 
 export default function HomeTop({setPage}) {
 
   const [left, setLeft] = React.useState(1)
-
 
   function navClick1() {
     setLeft(1)
@@ -21,6 +19,18 @@ export default function HomeTop({setPage}) {
     setPage(3)
   }
 
+  function buttonClick1() {
+    setPage(1)
+  }
+
+  function buttonClick2() {
+    setPage(2)
+  }
+
+  function buttonClick3() {
+    setPage(3)
+  }
+
   return (
     
     <div className="top-container">
@@ -30,18 +40,18 @@ export default function HomeTop({setPage}) {
           <img src="/assets/AdrianoTag.png" alt="adriano name"/>
           <p className="top-subtitle">Business student passionate about tech & digital products</p>
         </div>
-        <img className="globe-image" src="/assets/globeimage.png"/>
+        <img className="globe-image" alt="globe" src="/assets/globeimage.png"/>
       </div>
       <div className="top-buttons">
-        <button>
+        <button onClick={buttonClick1}>
           <img src="/assets/briefcase.png" alt="briefaces"/>
           <p>Work</p>
         </button>
-        <button>
+        <button onClick={buttonClick2}>
           <img src="/assets/code.png" alt="code brackets"/>
           <p>Projects</p>
         </button>
-        <button>
+        <button onClick={buttonClick3}>
           <img src="/assets/smiley.png" alt="smiley"/>
           <p>About</p>
         </button>

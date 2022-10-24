@@ -12,11 +12,11 @@ function App() {
   const [page, setPage] = React.useState(1)
 
   function renderPage() {
-    if (page == 1) {
+    if (page === 1) {
       return (<Work />)
-    } else if (page == 2){
+    } else if (page === 2){
       return (<Projects />)
-    } else if (page == 3){
+    } else if (page === 3){
       return (<About />)
     }
   }
