@@ -50,7 +50,7 @@ h1, h2, h3, h4, p{
 
 /* Home Page */
 .homepage-container{
-  width: 90%;
+  width: 90vw;
 }
 
 /* Top */
@@ -62,8 +62,9 @@ h1, h2, h3, h4, p{
 .top-top{
   display: flex;
   justify-content: space-between;
-  margin: 220px 0px;
   column-gap: 20px;
+  height: 75vh;
+  align-items: center;
 }
 
 .top-subtitle{
@@ -89,7 +90,7 @@ h1, h2, h3, h4, p{
   display: flex;
   justify-content: space-between;
   column-gap: 25px;
-  margin: 87px 0px;
+  height: 20vh;
 }
 
 .top-buttons button{
@@ -126,11 +127,62 @@ h1, h2, h3, h4, p{
 
 .mid-navigator{
   align-self: center;
+  margin-bottom: 75px;
+  position: relative;
 }
 
 .mid-navigator img{
   width: 250px;
-  margin-bottom: 75px;
+  z-index: 20;
+}
+
+.dot1, .dot2, .dot3{
+  height: 7px;
+  width: 7px;
+  background-color: var(--background-dark);
+  border-radius: 4px;
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+  transition: ease-in 0.3s;
+  z-index: -1;
+}
+
+
+.dot1{
+  left: 69px;
+}
+
+.dot2{
+  left: 125px;
+}
+
+.dot3{
+  left: 181px;
+}
+
+.nav-clickable1, .nav-clickable2 ,.nav-clickable3{
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  display: inline-block;
+  position: absolute;
+  top: 16px;
+  z-index: 10;
+  cursor: pointer;
+  background-color: #ff000000;
+}
+
+.nav-clickable1{
+  left: 65px;
+}
+
+.nav-clickable2{
+  left: 121px;
+}
+
+.nav-clickable3{
+  left: 177px;
 }
 
 

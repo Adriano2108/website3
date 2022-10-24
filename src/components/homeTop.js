@@ -1,4 +1,22 @@
+import { useState } from "react";
+import React from "react";
+
 export default function HomeTop() {
+
+  const [left, setLeft] = React.useState(1)
+
+
+  function navClick1() {
+    setLeft(1)
+  }
+
+  function navClick2() {
+    setLeft(2)
+  }
+
+  function navClick3() {
+    setLeft(3)
+  }
 
   return (
     
@@ -25,11 +43,13 @@ export default function HomeTop() {
           <p>About</p>
         </button>
       </div>
-
       <div className="mid-navigator">
         <img src="/assets/navigator.png" alt="navigator"/>
+        <span className="nav-clickable1" onClick={navClick1}></span>
+        <span className="nav-clickable2" onClick={navClick2}></span>
+        <span className="nav-clickable3" onClick={navClick3}></span>
+        <span className={`dot${left}`}></span>
       </div>
-
     </div>
   )
 }
