@@ -2,10 +2,14 @@ import React from "react";
 
 export default function Footer() {
 
-  const [built, setBuilt] = React.useState("Website <span className='bold'>built</span> by me")
+  const [built, setBuilt] = React.useState(<p>Website <span className='bold'>built</span> by me</p>)
 
   function builtDiff() {
+    setBuilt(<p>I'm <span className='bold'>built</span> different</p>)
+  }
 
+  function builtMe() {
+    setBuilt(<p>Website <span className='bold'>built</span> by me</p>)
   }
 
 
@@ -18,9 +22,7 @@ export default function Footer() {
         <a target="_blank" href="https://www.linkedin.com/in/adrianobarbet/"><img src="/assets/github.png"/></a>
       </div>
       <p>Copyright 2022 &#169; Adriano Barbet</p>
-      <p onMouseOver={builtDiff}>{built}</p>
+      <p className="custom-cursor" onMouseEnter={builtDiff} onMouseLeave={builtMe}>{built}</p>
     </div>
-
-
   )
 }
