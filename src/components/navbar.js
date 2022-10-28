@@ -2,7 +2,7 @@ import { useState } from "react";
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Route, Routes,} from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes,Link} from "react-router-dom";
 import HomeTop from "./homeTop";
 import Resume from "../pages/resume";
 
