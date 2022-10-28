@@ -1,34 +1,24 @@
 import React from "react";
 import './App.css';
-import Navbar from './components/navbar';
-import Footer from './components/footer'
-import HomeTop from './components/homeTop';
-import Work from './pages/work';
-import Projects from './pages/projects';
-import About from './pages/about';
+import Resume from "./pages/resume";
+import Main from "./pages/main"
+import NavBar from "./components/navbar";
+import Footer from "./components/footer";
+import Wefox from "./pages/wefox";
+import {BrowserRouter as Router, Route, Routes,} from "react-router-dom";
 
 function App() {
 
-  const [page, setPage] = React.useState(1)
-
-
-  function renderPage() {
-    if (page === 1) {
-      return (<Work />)
-    } else if (page === 2){
-      return (<Projects />)
-    } else if (page === 3){
-      return (<About />)
-    }
-  }
-
   return (
-    <div className="App">
-      <Navbar />
-      <HomeTop setPage={setPage}/>
-      {renderPage()}
+    <Router>
+      <NavBar />
+      <Routes>
+       <Route path="/" element={<Main />} />
+       <Route path="resume" element={<Resume />} />
+       <Route path="wefox" element={<Wefox />} />
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 

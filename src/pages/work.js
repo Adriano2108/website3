@@ -1,11 +1,12 @@
-export default function Work() {
+import {BrowserRouter as Router, Link, Routes,} from "react-router-dom";
 
+export default function Work() {
 
   return (
 
     <div className="work-container">
       <div className="grid-1">
-        <img className="grid-image" src="/assets/wefox.png"/>
+        <Link to="/wefox"><img className="grid-image" src="/assets/wefox.png"/></Link>
         <div className="grid-content">
           <h3>Product Management Intern</h3>
           <p><span className="bold">wefox</span> &#x2022; Product &#x2022; 2022</p>
