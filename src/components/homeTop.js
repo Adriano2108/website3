@@ -1,8 +1,9 @@
 import React from "react";
 
-export default function HomeTop({setPage}) {
+export default function HomeTop({setPage, page}) {
 
   const [left, setLeft] = React.useState(1)
+  const [border, setBorder] = React.useState("")
 
   function navClick1() {
     setLeft(1)
@@ -19,17 +20,16 @@ export default function HomeTop({setPage}) {
     setPage(3)
   }
 
-  function buttonClick1() {
-    setPage(1)
-  }
-
-  function buttonClick2() {
-    setPage(2)
-  }
-
-  function buttonClick3() {
-    setPage(3)
-  }
+  const array = [{key: 1, imgURL: "/assets/briefcase.png", imgAlt: "briefaces", text: "Work", pageNum: "1"}, {key: 2, imgURL: "/assets/code.png", imgAlt: "code", text: "Projects", pageNum: "2"}, {key: 3, imgURL: "/assets/smiley.png", imgAlt: "smiley", text: "About", pageNum: "3"}]
+  
+  {/* 
+  const buttons = array.map((btn) => (
+    <button key={btn.key} className={btn.pageNum===page ? "selected" : "not"} onClick={navClick1}>
+      <img src={btn.imgURL} alt={btn.imgAlt}/>
+      <p>{btn.text}</p>
+    </button>
+  ))
+  */}
 
   return (
     
@@ -43,15 +43,15 @@ export default function HomeTop({setPage}) {
         <img className="globe-image" alt="globe" src="/assets/globeimage.png"/>
       </div>
       <div className="top-buttons">
-        <button onClick={buttonClick1}>
-          <img src="/assets/briefcase.png" alt="briefaces"/>
+        <button onClick={navClick1}>
+          <img src="/assets/briefcase.png" alt="briefcase"/>
           <p>Work</p>
         </button>
-        <button onClick={buttonClick2}>
-          <img src="/assets/code.png" alt="code brackets"/>
+        <button onClick={navClick2}>
+          <img src="/assets/code.png" alt="code"/>
           <p>Projects</p>
         </button>
-        <button onClick={buttonClick3}>
+        <button onClick={navClick3}>
           <img src="/assets/smiley.png" alt="smiley"/>
           <p>About</p>
         </button>

@@ -22,7 +22,7 @@ export default function Footer() {
         <a target="_blank" href="https://www.linkedin.com/in/adrianobarbet/"><img src="/assets/github.png"/></a>
       </div>
       <p>Copyright 2022 &#169; Adriano Barbet</p>
-      <p className="custom-cursor" onMouseEnter={builtDiff} onMouseLeave={builtMe}>{built}</p>
+      <div className="custom-cursor" onMouseEnter={builtDiff} onMouseLeave={builtMe}>{built}</div>
     </div>
   )
 }

@@ -7,10 +7,10 @@ import Work from './pages/work';
 import Projects from './pages/projects';
 import About from './pages/about';
 
-
 function App() {
 
   const [page, setPage] = React.useState(1)
+
 
   function renderPage() {
     if (page === 1) {
