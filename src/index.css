@@ -40,6 +40,7 @@ h1, h2, h3, h4, p{
 
 /* Navbar */
 .navbar-container{
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -350,4 +351,16 @@ h1, h2, h3, h4, p{
 
 .custom-cursor{
   cursor: default;
+}
+
+/* Wefox */
+
+.wefox-container{
+
+}
+
+.page-header-img{
+  margin-top: -40px;
+  width: 100vw;
+  z-index: -1;
 }
