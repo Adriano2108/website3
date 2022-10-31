@@ -14,6 +14,7 @@
     "homepage": "https://Adriano2108.github.io/website3"
   },
   "scripts": {
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
